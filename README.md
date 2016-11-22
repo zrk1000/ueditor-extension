@@ -2,15 +2,17 @@
 UEditor扩展，UEditor上传图片到项目外部目录-java
 
 
-原料
+##原料
 
 1、ueditor源码，包括ueditor.jar的源码
 2、ueditor上传文件路径配置官方文档(http://fex.baidu.com/ueditor/#server-path)
-需求
+
+##需求
 
 查阅官方文档，上传的文件存放路径根据项目根路径配置，若要使文件存放路径配置到项目外，使用相对路径就行
 然而对于有些童鞋来说，使用相对路径../../../..会带来很多不确定性，项目迁移或文件服务器变动都需对相对路径进行重新调整，若在window server中跨盘符显然是无法满足的
-实操
+
+##实操
 
 开源的好处就是自己能动手，对源码进行些扩展以达到自己想要的效果。
 学习源码参考：ueditor文件上传研究（http://asialee.iteye.com/blog/2100187），感谢前人提供肩膀。
@@ -25,7 +27,8 @@ config.json中添加如下属性 （一定要添加此属性）：
     "physicsPath":"d:/resource", 
 
 physicsPath ：属性配置文件存放的路径，不同系统环境如“d:/resource”或“/home/resource”，若需使用ueditor默认配置，physicsPath值置为“”（空串）即可。
-使用：
+
+##使用：
 
 仅仅完成上面的配置是不够的，在使用中会图片是上传后是无法预览的，既然文件放在项目路径外部，想通过当前项目来访问这些图片不是好的方式；
 既然有将图片存放外部的需求，文件必然是使用单独的文件服务来访问，就需要在返回的路径前附加文件服务访问路径；好在config.json中“imageUrlPrefix”（访问路径前缀）可以满足这个要求（通常在文件存放项目路径下时我们设置“imageUrlPrefix”当前项目名，使用当前项目路径访问文件，文件放存外部后这样就不可行）；
@@ -67,4 +70,4 @@ physicsPath为空串时:
 
 这样就达到了对路径的扩展，是否需要将文件存放外部就由“physicsPath”来决定了。
 
-博客地址：http://blog.csdn.net/zrk1000/article/details/49885789
+##博客地址：http://blog.csdn.net/zrk1000/article/details/49885789
