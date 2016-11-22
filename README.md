@@ -36,7 +36,7 @@ physicsPath ：属性配置文件存放的路径，不同系统环境如“d:/re
 "imageUrlPrefix": "http://127.0.0.1:8080/resource", /* 图片访问路径前缀 */
 
 这时config.json是这样：
-
+```
 {
     /* 上传图片配置项 */
     "physicsPath":"d:/home/resource",
@@ -51,8 +51,8 @@ physicsPath ：属性配置文件存放的路径，不同系统环境如“d:/re
     "imagePathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
     /*此处省略80行，请参考百度ueditor中的config.json， 涂鸦、多图上传、视频上传、列出目录的“文件访问路径前缀”同“imageUrlPrefix”*/
  }
-
-这里”imageUrlPrefix”的”http://127.0.0.1:8080/resource“是文件服务器访问路径,完整的config.json中的涂鸦、多图上传、视频上传、列出目录等都只需要修改相应的前缀。
+```
+这里”imageUrlPrefix”的” http://127.0.0.1:8080/resource “ 是文件服务器访问路径,完整的config.json中的涂鸦、多图上传、视频上传、列出目录等都只需要修改相应的前缀。
 
 physicsPath不为空串时:
 
@@ -66,3 +66,5 @@ physicsPath为空串时:
     *此时imageUrlPrefix 应设置为项目名
 
 这样就达到了对路径的扩展，是否需要将文件存放外部就由“physicsPath”来决定了。
+
+博客地址：http://blog.csdn.net/zrk1000/article/details/49885789
